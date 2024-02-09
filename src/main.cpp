@@ -34,8 +34,12 @@ void setup()
         delay(500);
         Serial.print(".");
     }
+    WiFi.setAutoReconnect(true);
+    WiFi.persistent(false);
     Serial.println("");
     Serial.println("WiFi connected"); 
+    Serial.print("AP:\t");
+    Serial.println(WiFi.BSSIDstr());
     Serial.print("IP address:\t");
     Serial.println(WiFi.localIP());
     Serial.print("MAC address:\t");
